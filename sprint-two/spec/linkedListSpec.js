@@ -26,9 +26,23 @@ describe('linkedList', function() {
   it('should remove the head from the list when removeHead is called', function() {
     linkedList.addToTail(4);
     linkedList.addToTail(5);
+    linkedList.addToTail(6);
     expect(linkedList.head.value).to.equal(4);
     linkedList.removeHead();
     expect(linkedList.head.value).to.equal(5);
+  });
+
+  it('should remove the head from the list if there is only one node', function(){
+    linkedList.addToTail(4);
+    linkedList.removeHead();
+    linkedList.removeHead();
+    expect(linkedList.head).to.equal(null);
+  });
+
+  it('should remove the head from the list if there is only one node', function(){
+    linkedList.addToTail(4005);
+    linkedList.removeHead();
+    expect(linkedList.tail).to.equal(null);
   });
 
   it('should return the value of the former head when removeHead is called', function() {

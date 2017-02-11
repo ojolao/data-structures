@@ -32,14 +32,14 @@ describe('linkedList', function() {
     expect(linkedList.head.value).to.equal(5);
   });
 
-  it('should remove the head from the list if there is only one node', function(){
+  it('should remove the head from the list if there is only one node', function() {
     linkedList.addToTail(4);
     linkedList.removeHead();
     linkedList.removeHead();
     expect(linkedList.head).to.equal(null);
   });
 
-  it('should remove the head from the list if there is only one node', function(){
+  it('should remove the head from the list if there is only one node', function() {
     linkedList.addToTail(4005);
     linkedList.removeHead();
     expect(linkedList.tail).to.equal(null);
